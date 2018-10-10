@@ -10,7 +10,7 @@
  */
 
 
-echo "This is dynamically generating tables project!";
+echo "This project will dynamically generate HTML bootstrap tables for any given CSV file.";
 
 main::start('new.csv');
 
@@ -33,7 +33,8 @@ class csv{
             $record = fgetcsv($file);
             if ($count == 0) {
                 $fieldNames = $record;
-            } else {
+            }
+            else {
                 if (empty($record)) {
                     break;
                 }
@@ -54,7 +55,6 @@ class recordFactory{
 }
 
 class html{
-
     public static function createTable($records)
     {
         $count = 0;
@@ -107,8 +107,6 @@ class html{
         $html = '<td>' . $value . '</td>';
         return $html;
     }
-
-
 }
 
 class record{

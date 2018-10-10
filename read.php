@@ -18,7 +18,7 @@ function readCSV($csvFile){
     return $line_of_text;
 }
 
-$csvFile = "excel.csv";
+$csvFile = "new.csv";
 $csv = readCSV($csvFile);
 print_r($csv);
 echo '</pre>';
